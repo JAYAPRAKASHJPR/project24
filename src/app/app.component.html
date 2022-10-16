@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <ul>
+        <li> <a routerLink="/customer" routerLinkActive="active"> Customer </a></li>
+        <li> <a routerLink="/tax" routerLinkActive="active"> Tax  </a> </li>
+        <li> <a routerLink="/sub-route" routerLinkActive="active"> Tax-payer(Child Route) </a> </li>
+        <li> <a routerLink="/resolve" routerLinkActive="active"> resolver example </a> </li>
+        <li> <a routerLink="/displayContents" [queryParams]= "{'category':'watches'}" routerLinkActive="active"> Content  </a> </li>
+        <li> <a routerLink="/deactivate"  routerLinkActive="active"> Deactivate Guard  </a> </li>
+        <li> <a routerLink="/supplier"  routerLinkActive="active"> Supplier (Lazy Module)  </a> </li>
+
+        <input type="text" [(ngModel)]="taxAmountEntered">
+        <button (click)="processNavigation()">Move to Display Content</button>
+       
+    </ul>
+</nav>
+<router-outlet></router-outlet>
